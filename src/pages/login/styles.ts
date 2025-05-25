@@ -2,7 +2,6 @@
 import { StyleSheet } from 'react-native';
 
 export const style = StyleSheet.create({
-  // container geral da tela
   container: {
     flex: 1,
     backgroundColor: '#F2FDF6',     // verde clarinho de fundo

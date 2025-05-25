@@ -1,12 +1,37 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+// Suas telas
 import Login from './src/pages/login';
+import Home from './src/pages/Home';
+import Forms from './src/pages/Forms'; // importe a tela que será aberta após o login
+
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
-    <View style={{ flex: 1 }}>
+    <NavigationContainer>
       <StatusBar style="auto" />
-      <Login />
-    </View>
-  )
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: 'Página Inicial' }}
+        />
+        <Stack.Screen
+          name="Forms"
+          component={Forms}
+          options={{ title: 'Formulário' }} // <- Título da tela
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
