@@ -28,3 +28,17 @@ O app tem como objetivo consumir a API [MottuChallenge.API](https://github.com/N
 1. Clone o repositório:
    ```bash
    git clone https://github.com/NclFrei/ChallengeMottuWeb.git
+   
+2. Acesse a pasta do projeto:
+   ```bash
+   cd ChallengeMottuWeb
+   
+3. Instale as dependências:
+   ```bash
+   npm install
+
+4. Inicie o projeto:
+   ```bash
+   npx expo start
+
+Requisitos: Tenha o Expo Go instalado no celular ou um emulador Android/iOS configurado.
