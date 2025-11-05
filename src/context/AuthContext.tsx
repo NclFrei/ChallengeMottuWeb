@@ -26,9 +26,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
 
   const getApiUrl = () => {
-  if (Platform.OS === "android") return "http://10.0.2.2:5262/api/auth/login"; 
+  if (Platform.OS === "android") return "http://10.0.2.2:5262/api/v1/auth/login"; 
   if (Platform.OS === "ios") return "http://localhost:5262/api/auth/login";    
-  return "http://192.168.0.26:5262/api/auth/login"; 
+  return "http://192.168.0.26:5262/api/v1/auth/login"; 
 };
 
 

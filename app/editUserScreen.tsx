@@ -1,16 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+} from "react-native";
 import { useAuth } from "../src/context/AuthContext";
 import { fetchUser, updateUser } from "../src/services/userService";
 import { useTheme } from "../src/context/ThemeContext";
+import { useTranslation } from "react-i18next"; // 👈 import para tradução
 
 export default function EditUserScreen() {
-  const { user } = useAuth(); 
-  const { theme } = useTheme();  
+  const { user } = useAuth();
+  const { theme } = useTheme();
+  const { t } = useTranslation(); // 👈 hook de tradução
+
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -22,7 +31,7 @@ export default function EditUserScreen() {
         setEmail(data.email);
       } catch (error) {
         console.error(error);
-        Alert.alert("Erro", "Não foi possível carregar os dados do usuário.");
+        Alert.alert(t("user.errorTitle"), t("user.loadError"));
       } finally {
         setLoading(false);
       }
@@ -40,32 +49,38 @@ export default function EditUserScreen() {
 
     try {
       await updateUser(user.id, user.token, payload);
-      Alert.alert("Sucesso", "Usuário atualizado com sucesso!");
+      Alert.alert(t("user.successTitle"), t("user.successMessage"));
       setPassword("");
     } catch (error) {
       console.error(error);
-      Alert.alert("Erro", "Não foi possível atualizar o usuário.");
+      Alert.alert(t("user.errorTitle"), t("user.updateError"));
     }
   };
 
   if (loading) {
     return (
       <View style={[styles.center, { backgroundColor: theme.background }]}>
-        <Text style={{ color: theme.text }}>Carregando usuário...</Text>
+        <Text style={{ color: theme.text }}>{t("user.loading")}</Text>
       </View>
     );
   }
 
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <Text style={[styles.title, { color: theme.text }]}>Editar Usuário</Text>
+      <Text style={[styles.title, { color: theme.text }]}>
+        {t("user.editTitle")}
+      </Text>
 
       <TextInput
         style={[
           styles.input,
-          { backgroundColor: theme.inputBackground, color: theme.text, borderColor: theme.border }
+          {
+            backgroundColor: theme.inputBackground,
+            color: theme.text,
+            borderColor: theme.border,
+          },
         ]}
-        placeholder="Nome"
+        placeholder={t("user.name")}
         placeholderTextColor={theme.placeholder}
         value={nome}
         onChangeText={setNome}
@@ -74,9 +89,13 @@ export default function EditUserScreen() {
       <TextInput
         style={[
           styles.input,
-          { backgroundColor: theme.inputBackground, color: theme.text, borderColor: theme.border }
+          {
+            backgroundColor: theme.inputBackground,
+            color: theme.text,
+            borderColor: theme.border,
+          },
         ]}
-        placeholder="E-mail"
+        placeholder={t("user.email")}
         placeholderTextColor={theme.placeholder}
         value={email}
         onChangeText={setEmail}
@@ -86,9 +105,13 @@ export default function EditUserScreen() {
       <TextInput
         style={[
           styles.input,
-          { backgroundColor: theme.inputBackground, color: theme.text, borderColor: theme.border }
+          {
+            backgroundColor: theme.inputBackground,
+            color: theme.text,
+            borderColor: theme.border,
+          },
         ]}
-        placeholder="Nova senha (opcional)"
+        placeholder={t("user.newPassword")}
         placeholderTextColor={theme.placeholder}
         value={password}
         onChangeText={setPassword}
@@ -100,7 +123,7 @@ export default function EditUserScreen() {
         onPress={handleSave}
       >
         <Text style={[styles.buttonText, { color: theme.onPrimary }]}>
-          Salvar Alterações
+          {t("user.save")}
         </Text>
       </TouchableOpacity>
     </View>

@@ -1,0 +1,77 @@
+{
+  "login": {
+    "title": "Iniciar sesión",
+    "subtitle": "Accede a tu cuenta para gestionar el patio de motos",
+    "email": "Usuario",
+    "password": "Contraseña",
+    "enter": "Entrar",
+    "demo": "Credenciales de demostración: Usuario: admin | Contraseña: admin",
+    "noAccount": "¿No tienes cuenta?",
+    "createAccount": "Crear cuenta",
+    "error": "Usuario o contraseña inválidos",
+    "emailPlaceholder": "Ingresa tu usuario",
+    "passwordPlaceholder": "Ingresa tu contraseña"
+  },
+  "patio": {
+    "title": "Mis Patios",
+    "subtitle": "Administra tus áreas y motos",
+    "registerPatio": "Registrar Patio",
+    "createSubtitle": "Crea tu primer patio",
+    "nome": "Nombre del Patio",
+    "rua": "Calle",
+    "numero": "Número",
+    "bairro": "Barrio",
+    "cidade": "Ciudad",
+    "estado": "Estado",
+    "cep": "Código Postal",
+    "complemento": "Complemento",
+    "loading": "Cargando patios...",
+    "successTitle": "Éxito",
+    "successMessage": "¡Patio registrado con éxito!",
+    "errorTitle": "Error",
+    "fillAll": "Complete todos los campos obligatorios.",
+    "loadError": "No se pudieron cargar los patios.",
+    "createError": "No se pudo registrar el patio."
+  },
+  "area": {
+    "title": "Áreas",
+    "new": "+ Nueva Área",
+    "namePlaceholder": "Nombre de la nueva sección",
+    "errorTitle": "Error",
+    "fillName": "Ingrese un nombre para la sección.",
+    "createError": "No se pudo crear el área.",
+    "deleteError": "No se pudo eliminar el área.",
+    "updateError": "No se pudo editar el área."
+  },
+  "moto": {
+    "title": "Motos",
+    "new": "+ Nueva Moto",
+    "platePlaceholder": "Placa de la moto",
+    "modelPlaceholder": "Modelo de la moto",
+    "errorTitle": "Error",
+    "fillFields": "Ingrese la placa y el modelo de la moto.",
+    "createError": "No se pudo agregar la moto.",
+    "deleteError": "No se pudo eliminar la moto.",
+    "updateError": "No se pudo editar la moto."
+  },
+  "theme": {
+    "darkMode": "Tema oscuro"
+  },
+  "user": {
+    "editTitle": "Editar Usuario",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "newPassword": "Nueva contraseña (opcional)",
+    "save": "Guardar Cambios",
+    "loading": "Cargando usuario...",
+    "successTitle": "Éxito",
+    "successMessage": "¡Usuario actualizado con éxito!",
+    "errorTitle": "Error",
+    "loadError": "No se pudieron cargar los datos del usuario.",
+    "updateError": "No se pudo actualizar el usuario."
+  },
+  "header": {
+    "notifications": "Notificaciones",
+    "profile": "Perfil"
+  }
+}

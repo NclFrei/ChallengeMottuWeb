@@ -1,0 +1,99 @@
+{
+  "login": {
+    "title": "Login",
+    "subtitle": "Acesse sua conta para gerenciar o pátio de motos",
+    "email": "Usuário",
+    "password": "Senha",
+    "enter": "Entrar",
+    "demo": "Credenciais de demonstração: Usuário: admin | Senha: admin",
+    "noAccount": "Não tem conta?",
+    "createAccount": "Criar conta",
+    "error": "Usuário ou senha inválidos",
+    "emailPlaceholder": "Digite seu usuário",
+    "passwordPlaceholder": "Digite sua senha"
+  },
+
+  "register": {
+    "title": "Cadastro",
+    "name": "Nome",
+    "namePlaceholder": "Digite seu nome",
+    "email": "E-mail",
+    "emailPlaceholder": "Digite seu e-mail",
+    "password": "Senha",
+    "passwordPlaceholder": "Digite sua senha",
+    "button": "Cadastrar",
+    "alreadyAccount": "Já tenho conta",
+    "successTitle": "Sucesso",
+    "successMessage": "Usuário cadastrado com sucesso!",
+    "errorTitle": "Erro",
+    "fillAll": "Preencha todos os campos.",
+    "errorMessage": "Não foi possível cadastrar. Tente novamente."
+  },
+
+  "patio": {
+  "title": "Meus Pátios",
+  "subtitle": "Gerencie suas áreas e motos",
+  "registerPatio": "Cadastrar Pátio",
+  "createSubtitle": "Crie seu primeiro pátio",
+  "nome": "Nome do Pátio",
+  "rua": "Rua",
+  "numero": "Número",
+  "bairro": "Bairro",
+  "cidade": "Cidade",
+  "estado": "Estado",
+  "cep": "CEP",
+  "complemento": "Complemento",
+  "loading": "Carregando pátio...",
+  "successTitle": "Sucesso",
+  "successMessage": "Pátio cadastrado com sucesso!",
+  "errorTitle": "Erro",
+  "fillAll": "Preencha os campos obrigatórios.",
+  "createError": "Não foi possível cadastrar o pátio.",
+  "loadError": "Não foi possível carregar o pátio."
+},
+
+  "area": {
+    "title": "Áreas",
+    "noSections": "Nenhuma seção cadastrada.",
+    "noDescription": "Sem descrição",
+    "edit": "Editar Área",
+    "name": "Nome",
+    "description": "Descrição",
+    "save": "Salvar",
+    "cancel": "Cancelar"
+  },
+
+  "moto": {
+    "title": "Motos",
+    "noMotos": "Nenhuma moto cadastrada.",
+    "edit": "Editar Moto",
+    "plate": "Placa",
+    "model": "Modelo",
+    "owner": "Sem dono",
+    "save": "Salvar",
+    "cancel": "Cancelar"
+  },
+
+  "theme": {
+    "darkMode": "Tema escuro"
+  },
+
+  "user": {
+  "editTitle": "Editar Usuário",
+  "save": "Salvar Alterações",
+  "name": "Nome",
+  "email": "E-mail",
+  "newPassword": "Nova senha (opcional)",
+  "loading": "Carregando usuário...",
+  "successTitle": "Sucesso",
+  "successMessage": "Usuário atualizado com sucesso!",
+  "errorTitle": "Erro",
+  "loadError": "Não foi possível carregar os dados do usuário.",
+  "updateError": "Não foi possível atualizar o usuário."
+  },
+
+  "header": {
+    "notifications": "Notificações",
+    "profile": "Perfil"
+  }
+}
