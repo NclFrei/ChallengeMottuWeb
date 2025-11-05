@@ -6,11 +6,26 @@ import { AuthProvider } from "../src/context/AuthContext";
 import { ThemeProvider } from "../src/context/ThemeContext";
 import { LanguageProvider } from "../src/context/LanguageContext";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import * as Notifications from "expo-notifications";
+import { registerForPushNotificationsAsync } from "../src/utils/notifications";
 
 const queryClient = new QueryClient();
 
 export default function RootLayout() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    Notifications.setNotificationHandler({
+      handleNotification: async () => ({
+        shouldShowAlert: true,
+        shouldPlaySound: true,
+        shouldSetBadge: false,
+      }),
+    });
+
+    registerForPushNotificationsAsync();
+  }, []);
 
   return (
     <SafeAreaProvider>
@@ -25,7 +40,7 @@ export default function RootLayout() {
                   name="editUserScreen"
                   options={{
                     headerShown: true,
-                    title: t("user.editTitle"), // 🔄 traduz o título automaticamente
+                    title: t("user.editTitle"), 
                   }}
                 />
               </Stack>

@@ -12,9 +12,9 @@ import {
 import axios from "axios";
 import { router } from "expo-router";
 import { useTheme } from "../src/context/ThemeContext";
-import { useTranslation } from "react-i18next"; // 👈 Import do i18n
+import { useTranslation } from "react-i18next"; 
 
-const API_URL = "http://10.0.2.2:5262/api/Auth/Cadastro";
+const API_URL = "http://10.0.2.2:5262/api/v1/Auth/Cadastro";
 
 export default function CadastroScreen() {
   const [nome, setNome] = useState("");
@@ -23,7 +23,7 @@ export default function CadastroScreen() {
   const [loading, setLoading] = useState(false);
 
   const { theme } = useTheme();
-  const { t } = useTranslation(); // 👈 Hook de tradução
+  const { t } = useTranslation(); 
 
   const handleCadastro = async () => {
     if (!nome.trim() || !email.trim() || !password.trim()) {

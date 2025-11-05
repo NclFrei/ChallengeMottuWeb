@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://10.0.2.2:5262/api/Moto";
+const API_URL = "http://10.0.2.2:5262/api/v1/Moto";
 
 export const createMoto = async (placa: string, modelo: string, areaId: number, token: string) => {
   const response = await axios.post(
