@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "756612568418",
+    "project_id": "challengemottu-cc0ec",
+    "storage_bucket": "challengemottu-cc0ec.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756612568418:android:317144559c6863bba3083b",
+        "android_client_info": {
+          "package_name": "com.nclfrei.Eco"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPJo90z4TWCiSgfXfTWGG6mWIPnDdB2HU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
