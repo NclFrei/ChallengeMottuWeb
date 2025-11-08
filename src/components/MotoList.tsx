@@ -15,7 +15,7 @@ type Props = {
 
 export default function MotoList({ areas, onEdit, onDelete }: Props) {
   const { theme } = useTheme();
-  const { t } = useTranslation(); // 👈 Hook de tradução
+  const { t } = useTranslation(); 
 
   const todasMotos = areas.flatMap((a) => a.motos);
 

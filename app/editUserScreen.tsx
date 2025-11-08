@@ -10,12 +10,12 @@ import {
 import { useAuth } from "../src/context/AuthContext";
 import { fetchUser, updateUser } from "../src/services/userService";
 import { useTheme } from "../src/context/ThemeContext";
-import { useTranslation } from "react-i18next"; // 👈 import para tradução
+import { useTranslation } from "react-i18next"; 
 
 export default function EditUserScreen() {
   const { user } = useAuth();
   const { theme } = useTheme();
-  const { t } = useTranslation(); // 👈 hook de tradução
+  const { t } = useTranslation(); 
 
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");

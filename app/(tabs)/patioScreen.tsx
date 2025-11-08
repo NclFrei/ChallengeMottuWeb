@@ -58,7 +58,6 @@ export default function PatioScreen() {
     }
   };
 
-  // 🔁 Atualiza sempre que a tela é focada
   useFocusEffect(
     useCallback(() => {
       carregarPatios();
@@ -69,7 +68,7 @@ export default function PatioScreen() {
     }, [user])
   );
 
-  // ⏳ Tela de carregamento
+
   if (loading) {
     return (
       <View style={[styles.center, { backgroundColor: theme.background }]}>
@@ -78,7 +77,6 @@ export default function PatioScreen() {
     );
   }
 
-  // 📭 Nenhum pátio encontrado
   if (patios.length === 0) {
     return (
       <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.background }]}>
@@ -100,7 +98,6 @@ export default function PatioScreen() {
     );
   }
 
-  // ✅ Lista de pátios
   return (
     <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.background }]}>
       <Header title={t("patio.title")} subtitle={t("patio.subtitle")} />

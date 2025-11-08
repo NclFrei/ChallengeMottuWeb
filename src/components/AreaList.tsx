@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 type Area = { id: number; nome: string; descricao?: string };
 
@@ -13,9 +14,14 @@ type Props = {
 
 export default function AreaList({ areas, onEdit, onDelete }: Props) {
   const { theme } = useTheme();
+  const { t } = useTranslation();
 
   if (areas.length === 0)
-    return <Text style={[styles.text, { color: theme.textSecondary }]}>Nenhuma seção cadastrada.</Text>;
+    return (
+      <Text style={[styles.text, { color: theme.textSecondary }]}>
+        {t("area.noSections")}
+      </Text>
+    );
 
   return (
     <>
@@ -33,19 +39,49 @@ export default function AreaList({ areas, onEdit, onDelete }: Props) {
             key={area.id}
             style={[
               styles.secaoBox,
-              { borderLeftColor: secaoColor, backgroundColor: theme.card, borderColor: theme.border }
+              {
+                borderLeftColor: secaoColor,
+                backgroundColor: theme.card,
+                borderColor: theme.border,
+              },
             ]}
           >
-            <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
               <View>
-                <Text style={[styles.itemTitle, { color: theme.text }]}>{area.nome}</Text>
-                <Text style={[styles.text, { color: theme.textSecondary }]}>{area.descricao || "Sem descrição"}</Text>
+                <Text style={[styles.itemTitle, { color: theme.text }]}>
+                  {area.nome}
+                </Text>
+                <Text style={[styles.text, { color: theme.textSecondary }]}>
+                  {area.descricao || t("area.noDescription")}
+                </Text>
               </View>
               <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity style={[styles.editButton, { backgroundColor: theme.inputBackground }]} onPress={() => onEdit(area)}>
-                  <Ionicons name="create-outline" size={20} color={theme.primary} />
+                <TouchableOpacity
+                  style={[
+                    styles.editButton,
+                    { backgroundColor: theme.inputBackground },
+                  ]}
+                  onPress={() => onEdit(area)}
+                >
+                  <Ionicons
+                    name="create-outline"
+                    size={20}
+                    color={theme.primary}
+                  />
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.deleteButton, { backgroundColor: theme.inputBackground }]} onPress={() => onDelete(area.id)}>
+                <TouchableOpacity
+                  style={[
+                    styles.deleteButton,
+                    { backgroundColor: theme.inputBackground },
+                  ]}
+                  onPress={() => onDelete(area.id)}
+                >
                   <Ionicons name="trash-outline" size={20} color="#ef4444" />
                 </TouchableOpacity>
               </View>

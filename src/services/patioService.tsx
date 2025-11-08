@@ -3,11 +3,11 @@ export async function fetchPatios(userId: number, token: string) {
 
   try {
     const response = await fetch(
-      `http://10.0.2.2:5262/ChallengeMottu/Patio/Userid/${userId}`,
+      `http://10.0.2.2:5262/api/v1/Patio/Userid/${userId}`,
       {
         method: "GET",
         headers: {
-          "Authorization": `Bearer ${token}`, // ✅ se sua API exige JWT
+          "Authorization": `Bearer ${token}`, 
           "Content-Type": "application/json",
         },
       }
@@ -23,7 +23,7 @@ export async function fetchPatios(userId: number, token: string) {
     }
 
     const data = await response.json();
-    console.log("Resposta da API:", data); // ✅ log detalhado da resposta
+    console.log("Resposta da API:", data); 
     return data;
 
   } catch (error) {
@@ -35,7 +35,7 @@ export async function fetchPatios(userId: number, token: string) {
 export async function createPatio(patioData: any, token: string) {
   console.log("Cadastrando novo pátio:", patioData);
   try {
-    const response = await fetch(`http://10.0.2.2:5262/ChallengeMottu/Patio`, {
+    const response = await fetch(`http://10.0.2.2:5262/api/v1/Patio`, {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,

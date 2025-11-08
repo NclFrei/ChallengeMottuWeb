@@ -12,86 +12,64 @@
     "emailPlaceholder": "Digite seu usuário",
     "passwordPlaceholder": "Digite sua senha"
   },
-
-  "register": {
-    "title": "Cadastro",
-    "name": "Nome",
-    "namePlaceholder": "Digite seu nome",
-    "email": "E-mail",
-    "emailPlaceholder": "Digite seu e-mail",
-    "password": "Senha",
-    "passwordPlaceholder": "Digite sua senha",
-    "button": "Cadastrar",
-    "alreadyAccount": "Já tenho conta",
-    "successTitle": "Sucesso",
-    "successMessage": "Usuário cadastrado com sucesso!",
-    "errorTitle": "Erro",
-    "fillAll": "Preencha todos os campos.",
-    "errorMessage": "Não foi possível cadastrar. Tente novamente."
-  },
-
   "patio": {
-  "title": "Meus Pátios",
-  "subtitle": "Gerencie suas áreas e motos",
-  "registerPatio": "Cadastrar Pátio",
-  "createSubtitle": "Crie seu primeiro pátio",
-  "nome": "Nome do Pátio",
-  "rua": "Rua",
-  "numero": "Número",
-  "bairro": "Bairro",
-  "cidade": "Cidade",
-  "estado": "Estado",
-  "cep": "CEP",
-  "complemento": "Complemento",
-  "loading": "Carregando pátio...",
-  "successTitle": "Sucesso",
-  "successMessage": "Pátio cadastrado com sucesso!",
-  "errorTitle": "Erro",
-  "fillAll": "Preencha os campos obrigatórios.",
-  "createError": "Não foi possível cadastrar o pátio.",
-  "loadError": "Não foi possível carregar o pátio."
-},
-
+    "title": "Meus Pátios",
+    "subtitle": "Gerencie suas áreas e motos",
+    "registerPatio": "Cadastrar Pátio",
+    "createSubtitle": "Crie seu primeiro pátio",
+    "nome": "Nome do Pátio",
+    "rua": "Rua",
+    "numero": "Número",
+    "bairro": "Bairro",
+    "cidade": "Cidade",
+    "estado": "Estado",
+    "cep": "CEP",
+    "complemento": "Complemento",
+    "loading": "Carregando pátios...",
+    "successTitle": "Sucesso",
+    "successMessage": "Pátio cadastrado com sucesso!",
+    "errorTitle": "Erro",
+    "fillAll": "Preencha todos os campos obrigatórios.",
+    "loadError": "Não foi possível carregar os pátios.",
+    "createError": "Não foi possível cadastrar o pátio."
+  },
   "area": {
     "title": "Áreas",
-    "noSections": "Nenhuma seção cadastrada.",
-    "noDescription": "Sem descrição",
-    "edit": "Editar Área",
-    "name": "Nome",
-    "description": "Descrição",
-    "save": "Salvar",
-    "cancel": "Cancelar"
+    "new": "+ Nova Área",
+    "namePlaceholder": "Nome da nova seção",
+    "errorTitle": "Erro",
+    "fillName": "Digite um nome para a seção.",
+    "createError": "Não foi possível criar a área.",
+    "deleteError": "Não foi possível apagar a área.",
+    "updateError": "Não foi possível editar a área."
   },
-
   "moto": {
     "title": "Motos",
-    "noMotos": "Nenhuma moto cadastrada.",
-    "edit": "Editar Moto",
-    "plate": "Placa",
-    "model": "Modelo",
-    "owner": "Sem dono",
-    "save": "Salvar",
-    "cancel": "Cancelar"
+    "new": "+ Nova Moto",
+    "platePlaceholder": "Placa da moto",
+    "modelPlaceholder": "Modelo da moto",
+    "errorTitle": "Erro",
+    "fillFields": "Digite placa e modelo da moto.",
+    "createError": "Não foi possível adicionar a moto.",
+    "deleteError": "Não foi possível apagar a moto.",
+    "updateError": "Não foi possível editar a moto."
   },
-
   "theme": {
     "darkMode": "Tema escuro"
   },
-
   "user": {
-  "editTitle": "Editar Usuário",
-  "save": "Salvar Alterações",
-  "name": "Nome",
-  "email": "E-mail",
-  "newPassword": "Nova senha (opcional)",
-  "loading": "Carregando usuário...",
-  "successTitle": "Sucesso",
-  "successMessage": "Usuário atualizado com sucesso!",
-  "errorTitle": "Erro",
-  "loadError": "Não foi possível carregar os dados do usuário.",
-  "updateError": "Não foi possível atualizar o usuário."
+    "editTitle": "Editar Usuário",
+    "name": "Nome",
+    "email": "E-mail",
+    "newPassword": "Nova senha (opcional)",
+    "save": "Salvar Alterações",
+    "loading": "Carregando usuário...",
+    "successTitle": "Sucesso",
+    "successMessage": "Usuário atualizado com sucesso!",
+    "errorTitle": "Erro",
+    "loadError": "Não foi possível carregar os dados do usuário.",
+    "updateError": "Não foi possível atualizar o usuário."
   },
-
   "header": {
     "notifications": "Notificações",
     "profile": "Perfil"

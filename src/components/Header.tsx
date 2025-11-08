@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { useTheme } from "../context/ThemeContext";
-import { useTranslation } from "react-i18next"; // 👈 Import da tradução
+import { useTranslation } from "react-i18next"; 
 
 type HeaderProps = {
   title: string;
@@ -20,7 +20,7 @@ export default function Header({
 }: HeaderProps) {
   const router = useRouter();
   const { theme } = useTheme();
-  const { t } = useTranslation(); // 👈 Hook de tradução
+  const { t } = useTranslation(); 
 
   return (
     <View style={[styles.header, { backgroundColor: theme.card }]}>

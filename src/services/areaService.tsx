@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://10.0.2.2:5262/api/Area";
+const API_URL = "http://10.0.2.2:5262/api/v1/Area";
 
 export const createArea = async (nome: string, patioId: number, token: string) => {
   const response = await axios.post(
